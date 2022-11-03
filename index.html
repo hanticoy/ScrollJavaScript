@@ -23,20 +23,14 @@
 	Coding is <div id="magic"></div>
     
   <script>
-		var words = ["a lot of fun", 
-					"about not giving up", 
-					"challenging and empowering", 
-					"creative expression",
-					"what I learned at CodingDojo!"]
-			
+		var words = ["a lot of fun", "about not giving up", "challenging and empowering", "creative expression", "what I learned at CodingDojo!"];
 			el = document.getElementById('magic');
 			word_counter = 0;
 			character_counter = 0;
-
 		function updateText()
 		{
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
-			if(character_counter == words[word_counter].length)
+			if(character_counter > words[word_counter].length)
 			{
 				word_counter++; 	//escoge una palabra distinta
 				character_counter = 0;	//empieza de nuevo con el primer carácter de la palabra
@@ -46,7 +40,6 @@
 					word_counter = 0;
 			}
 		}
-		
 		setInterval(updateText,300);
 	</script>
 </body>
